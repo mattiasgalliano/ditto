@@ -24,3 +24,6 @@ python -i main.py
 docker pull mattiasagalliano/ditto
 docker run -ti -e OPENAI_API_KEY="XXX" mattiasagalliano/ditto
 ```
+
+<h2>Experiment 🧪</h2>
+Edit config.json file in normal setup to experiment with different models, prompts, temperature values, etc.
