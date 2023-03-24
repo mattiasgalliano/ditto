@@ -7,6 +7,7 @@ Python 3.10 (https://www.python.org/downloads/release/python-3100/)<br \>
 OpenAI API Key (https://platform.openai.com/account/api-keys)<br \>
 Git (https://git-scm.com/) OR Docker (https://www.docker.com/)
 <h1>Quickstart</h1>
+Follow terminal commands below to start Ditto, replace XXX with your OpenAI API Key.
 <h2>Setup</h2>
 
 ```
