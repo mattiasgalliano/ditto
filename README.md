@@ -18,12 +18,12 @@ echo OPENAI_API_KEY="XXX" > .env
 python -i main.py
 ```
 
-<h2>With Docker</h2>
+<h2>Experiment 🧪</h2>
+Edit <b>config.json</b> file after setup to experiment with different LLMs, prompts, temperature values, etc.
+
+<h2>Run with Docker</h2>
 
 ```
 docker pull mattiasagalliano/ditto
 docker run -ti -e OPENAI_API_KEY="XXX" mattiasagalliano/ditto
 ```
-
-<h2>Experiment 🧪</h2>
-Edit <b>config.json</b> file after setup to experiment with different models, prompts, temperature values, etc.
