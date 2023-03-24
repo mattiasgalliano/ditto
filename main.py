@@ -70,7 +70,8 @@ memory = ConversationSummaryBufferMemory(llm=llm, return_messages=True)
 ### instantiate conversation chain
 conversation = ConversationChain(memory=memory, prompt=prompt, llm=llm)
 
-if __name__ == "__main__":
+### repeatedly solicit personas from user, generate associated model outputs all via CLI
+def run():
     print(f"\nModel Name: {model_name}") # print config variables
     print(f"Temperature: {temperature}")
     print(f"System Template: '{system_template}'")
@@ -93,7 +94,7 @@ if __name__ == "__main__":
     ⠀⠀⠙⢳⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⡞⠛⠛⠛⠛⠛⠛⣶⣶⣶⣶⡞⠛⠃⠀\n""")
     print("\nDitto: Hi trainer! I'm Ditto. I love to impersonate, and can easily morph into any persona you tell me. Go on, name a persona below:\n")
     
-    first = True # flag, logic for deterministic first, non-first AI persona solicitations
+    first = True # flag, logic for deterministic first, non-first persona solicitations
     while True:
         if not first: print("\nDitto: That was fun! Go on, name another persona:\n")
         first = False
@@ -104,3 +105,6 @@ if __name__ == "__main__":
 
         print("\nDitto: " + out) # print output
         print("\n---Hit ^C or kill this Python process to exit.---\n") # exit info
+
+if __name__ == "__main__":
+    run()
