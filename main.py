@@ -1,7 +1,5 @@
 # ## Simple Memory Chat Bot
 
-# Welcome to the technical screen for the Machine Learning position! In this exercise, you will be tasked with building a chat bot that can run in a terminal. The chat bot should ask the user for input as to what persona it should act like, and it should have simple memory capabilities so that it can recall previous messages. You are free to use any programming language of your choice, but we recommend Python.
-
 # ## **Requirements**
 
 # 1. Create a chat bot that can run in a terminal.
@@ -45,7 +43,7 @@ import json # for config
 load_dotenv()
 key = os.environ.get('OPENAI_API_KEY')
 
-### set app vars with config json
+### set app variables with config json
 with open("config.json", "r") as f: app_vars = json.load(f)
 model_name = app_vars["model_name"]
 system_template = app_vars["system_template"]
@@ -73,13 +71,13 @@ memory = ConversationSummaryBufferMemory(llm=llm, return_messages=True)
 conversation = ConversationChain(memory=memory, prompt=prompt, llm=llm)
 
 if __name__ == "__main__":
-    print(f"\nModel Name: {model_name}")
+    print(f"\nModel Name: {model_name}") # print app variables
     print(f"Temperature: {temperature}")
     print(f"System Template: '{system_template}'")
     print(f"Input Prefix: '{input_prefix}'\n")
     
     print("\n---Hit ^C or kill this Python process to exit.---\n")
-    print("\n---Entering a chat with Ditto, your favorite shapeshifter! Be mindful, Ditto doesn't forget so easily.---\n")
+    print("\n---Entering a chat with Ditto, your favorite shapeshifter! Be mindful, Ditto doesn't forget so easily.---\n") # intro
     print("""\n   ⠀⠀⠀⢠⡜⠛⠛⠿⣤⠀⠀⣤⡼⠿⠿⢧⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
     ⠀⣀⡶⠎⠁⠀⠀⠀⠉⠶⠶⠉⠁⠀⠀⠈⠹⢆⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
     ⣀⡿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠶⠶⠶⠶⣆⡀⠀⠀⠀⠀
@@ -93,11 +91,11 @@ if __name__ == "__main__":
     ⠀⣶⡏⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿
     ⠀⠿⣇⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⣀⣀⠀⠀⠀⠀⢀⣀⣸⠿
     ⠀⠀⠙⢳⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⡞⠛⠛⠛⠛⠛⠛⣶⣶⣶⣶⡞⠛⠃⠀\n""")
+    print("\nDitto: Hi trainer! I'm Ditto. I love to impersonate, and can easily morph into any persona you tell me. Go on, name a persona below:\n")
     
-    first = True # flag, logic for deterministic first, non-first chat instances
+    first = True # flag, logic for deterministic first, non-first AI solicitations
     while True:
-        if first: print("\nDitto: Hi trainer! I'm Ditto. I love to impersonate, and can easily morph into any persona you tell me. Go on, name a persona below:\n")
-        elif not first: print("\nDitto: That was fun! Go on, name another persona:\n")
+        if not first: print("\nDitto: That was fun! Go on, name another persona:\n")
         first = False
 
         persona = input("Persona: ")
