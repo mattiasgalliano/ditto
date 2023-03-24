@@ -5,9 +5,9 @@ Ditto is an LLM-powered chatbot in your terminal that can emulate any persona. H
 <h1>Requirements</h1>
 Python 3.10 (https://www.python.org/downloads/release/python-3100/)<br \>
 OpenAI API Key (https://platform.openai.com/account/api-keys)<br \>
-Git (https://git-scm.com/) OR Docker (https://www.docker.com/)
+Git (https://git-scm.com/) <b>or</b> Docker (https://www.docker.com/)
 <h1>Quickstart</h1>
-Follow terminal commands below to start Ditto, replace XXX with your OpenAI API Key.
+Follow terminal commands below to start Ditto, <b>replace XXX with your OpenAI API Key</b>.
 <h2>Setup</h2>
 
 ```
@@ -26,4 +26,4 @@ docker run -ti -e OPENAI_API_KEY="XXX" mattiasagalliano/ditto
 ```
 
 <h2>Experiment 🧪</h2>
-Edit config.json file in normal setup to experiment with different models, prompts, temperature values, etc.
+Edit <b>config.json</b> file after setup to experiment with different models, prompts, temperature values, etc.
