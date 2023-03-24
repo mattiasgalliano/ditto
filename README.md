@@ -30,4 +30,4 @@ docker run -ti -e OPENAI_API_KEY="XXX" mattiasagalliano/ditto
 ```
 
 <h3>Experiment 🧪</h3>
-Edit <b>config.json</b> file after setup to experiment with different LLMs, prompts, temperature values, etc.
+Edit <b>config.json</b> file after setup to experiment with different LLMs, prompts, temperature values, etc. Supported models are from OpenAI (https://platform.openai.com/docs/models/gpt-4)
