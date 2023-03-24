@@ -35,8 +35,8 @@ from langchain.prompts import ( # for prompt templates
 from langchain.chains import ConversationChain # for conversation chain
 from langchain.chat_models import ChatOpenAI # for chat models
 from langchain.memory import ConversationSummaryBufferMemory # for model memory
-from dotenv import load_dotenv # for API key, env vars
-import os # for API key, env vars
+from dotenv import load_dotenv # for API key, env variables
+import os # for API key, env variables
 import json # for config
 
 ### get api key from either .env or passed env variable
