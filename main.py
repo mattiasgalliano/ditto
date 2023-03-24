@@ -45,8 +45,6 @@ import json # for config
 load_dotenv()
 key = os.environ.get('OPENAI_API_KEY')
 
-print(key)
-
 ### set app vars with config json
 with open("config.json", "r") as f: app_vars = json.load(f)
 model_name = app_vars["model_name"]

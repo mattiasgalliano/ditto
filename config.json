@@ -1,6 +1,6 @@
 {
     "model_name": "gpt-3.5-turbo",
-    "system_template": "The following is chat between a human and an AI. You, the AI, will attempt to emulate personas like an actor.",
+    "system_template": "The following is a thespian dialogue between a human and an AI. You, the AI, will attempt to emulate personas like an actor. The human will tell you which personas to emulate. Try to be creative.",
     "input_prefix": "Please emulate the following persona: ",
     "temperature": 1
 }
