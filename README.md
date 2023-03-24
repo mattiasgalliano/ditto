@@ -3,7 +3,7 @@
 Ditto is a flexible LLM-powered chatbot in your terminal that can emulate any persona. Have fun! :smile:
 
 <h2>Example</h2>
-![Example](/example.png)
+![Example](example/example.png)
 
 <h2>Requirements</h2>
 Python 3.10 (https://www.python.org/downloads/release/python-3100/)<br \>
