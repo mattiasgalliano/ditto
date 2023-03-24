@@ -1,6 +1,6 @@
 <h1>Ditto Chatbot</h1>
 
-Ditto is an LLM-powered chatbot in your terminal that can emulate any persona. Have fun :smile:!
+Ditto is an LLM-powered chatbot in your terminal that can emulate any persona. Have fun :grin:!
 
 <h1>Requirements</h1>
 Python 3.10 (https://www.python.org/downloads/release/python-3100)<br \>
