@@ -7,10 +7,14 @@ Python 3.10 (https://www.python.org/downloads/release/python-3100/)
 OpenAI API Key (https://platform.openai.com/account/api-keys)
 <h1>Quickstart</h1>
 <h2>Setup</h2>
-```git clone https://github.com/mattiasgalliano/ditto.git
+
+```
+git clone https://github.com/mattiasgalliano/ditto.git
 cd ditto
 pip install -r "requirements.txt"
 echo OPENAI_API_KEY="XXX" > .env
-python -i main.py```
+python -i main.py
+```
+
 <h2>With Docker</h2>
 <h2>Without Docker</h2>
