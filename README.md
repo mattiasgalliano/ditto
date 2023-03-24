@@ -10,7 +10,7 @@ OpenAI API Key (https://platform.openai.com/account/api-keys)<br \>
 Git (https://git-scm.com/) <b>or</b> Docker (https://www.docker.com/)
 <h2>Quickstart</h2>
 Follow terminal commands below to start Ditto, replace <b>XXX</b> with your OpenAI API Key.
-<h3>Setup</h3>
+<h3>Setup and Run</h3>
 
 ```
 git clone https://github.com/mattiasgalliano/ditto.git
