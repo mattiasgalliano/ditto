@@ -3,7 +3,7 @@
 Ditto is an LLM-powered chatbot in your terminal that can emulate any persona!
 
 <h1>Requirements</h1>
-Python 3.10 (https://www.python.org/downloads/release/python-3100/) \ 
+Python 3.10 (https://www.python.org/downloads/release/python-3100/) \n 
 OpenAI API Key (https://platform.openai.com/account/api-keys)
 <h1>Quickstart</h1>
 <h2>Setup</h2>
