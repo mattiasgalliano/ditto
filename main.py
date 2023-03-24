@@ -39,16 +39,16 @@ from dotenv import load_dotenv # for API key, env vars
 import os # for API key, env vars
 import json # for config
 
-### get api key
+### get api key from either .env or passed env variable
 load_dotenv()
 key = os.environ.get('OPENAI_API_KEY')
 
-### set app variables with config json
-with open("config.json", "r") as f: app_vars = json.load(f)
-model_name = app_vars["model_name"]
-system_template = app_vars["system_template"]
-input_prefix = app_vars["input_prefix"]
-temperature = app_vars["temperature"]
+### set config variables with config json
+with open("config.json", "r") as f: config_vars = json.load(f)
+model_name = config_vars["model_name"]
+system_template = config_vars["system_template"]
+input_prefix = config_vars["input_prefix"]
+temperature = config_vars["temperature"]
 
 ### instantiate prompt from template
 prompt = ChatPromptTemplate.from_messages([
@@ -71,12 +71,12 @@ memory = ConversationSummaryBufferMemory(llm=llm, return_messages=True)
 conversation = ConversationChain(memory=memory, prompt=prompt, llm=llm)
 
 if __name__ == "__main__":
-    print(f"\nModel Name: {model_name}") # print app variables
+    print(f"\nModel Name: {model_name}") # print config variables
     print(f"Temperature: {temperature}")
     print(f"System Template: '{system_template}'")
     print(f"Input Prefix: '{input_prefix}'\n")
     
-    print("\n---Hit ^C or kill this Python process to exit.---\n")
+    print("\n---Hit ^C or kill this Python process to exit.---\n") # exit info
     print("\n---Entering a chat with Ditto, your favorite shapeshifter! Be mindful, Ditto doesn't forget so easily.---\n") # intro
     print("""\n   ⠀⠀⠀⢠⡜⠛⠛⠿⣤⠀⠀⣤⡼⠿⠿⢧⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
     ⠀⣀⡶⠎⠁⠀⠀⠀⠉⠶⠶⠉⠁⠀⠀⠈⠹⢆⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -93,14 +93,14 @@ if __name__ == "__main__":
     ⠀⠀⠙⢳⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⡞⠛⠛⠛⠛⠛⠛⣶⣶⣶⣶⡞⠛⠃⠀\n""")
     print("\nDitto: Hi trainer! I'm Ditto. I love to impersonate, and can easily morph into any persona you tell me. Go on, name a persona below:\n")
     
-    first = True # flag, logic for deterministic first, non-first AI solicitations
+    first = True # flag, logic for deterministic first, non-first AI persona solicitations
     while True:
         if not first: print("\nDitto: That was fun! Go on, name another persona:\n")
         first = False
 
-        persona = input("Persona: ")
-        inp = input_prefix + persona
-        out = conversation.predict(input=inp)
+        persona = input("Persona: ") # cli human input for persona 
+        inp = input_prefix + persona # prepend prefix
+        out = conversation.predict(input=inp) # run model inference, save output
 
-        print("\nDitto: " + out)
-        print("\n---Hit ^C or kill this Python process to exit.---\n")
+        print("\nDitto: " + out) # print output
+        print("\n---Hit ^C or kill this Python process to exit.---\n") # exit info
