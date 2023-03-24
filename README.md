@@ -18,7 +18,7 @@ Follow the terminal commands below to start Ditto, replace <b>XXX</b> with your 
 git clone https://github.com/mattiasgalliano/ditto.git
 cd ditto
 pip install -r "requirements.txt"
-echo OPENAI_API_KEY="XXX" > .env
+echo OPENAI_API_KEY="XXX" > .env # ensure terminal output encoding is UTF-8
 python -i main.py
 ```
 
