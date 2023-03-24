@@ -18,4 +18,8 @@ python -i main.py
 ```
 
 <h2>With Docker</h2>
-<h2>Without Docker</h2>
+
+```
+docker pull mattiasagalliano/ditto
+docker run -ti -e OPENAI_API_KEY="XXX" mattiasagalliano/ditto
+```
